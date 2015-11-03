@@ -1,0 +1,97 @@
+body {
+    background: url('../img/background.jpg');
+    margin: 0;
+    padding: 0;
+}
+
+h2, h4{
+    text-align: center;
+    font-family:"宋体",Arial, Helvetica, sans-serif;
+ }
+
+ p {
+    font-family:"宋体",Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: normal;
+    text-shadow: 0 1px 1px rgba(0,0,0,.8);
+ }
+
+ h2, h4 {
+    color: white;
+    text-shadow: 0 1px 1px rgba(0,0,0,.8);
+
+ }
+
+ a {
+    text-decoration:none;
+ }
+
+.main-header {
+    font-size: 1.2rem;
+    background-color: #384047;
+    padding: 1px;
+
+    padding-left: 30px;
+
+}
+
+#intro {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+#start {
+    color: white;
+    line-height: 1;
+    margin-top: 20px;
+    margin-left: 40%;
+    margin-right: 50%;
+    background: url('../img/aegis.png');
+    display: block;
+    box-sizing: border-box;
+    width: 20%;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0.5px 0.5px 3px 3px #fff;
+    border: none;
+}
+
+.main-footer {
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: #384047;
+    margin-top: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+
+.choose {
+    text-align: center;
+    margin: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+}
+
+img {
+    border: 3px;
+    border-style: solid;
+    border-color: #007aff;
+}
+
+#choose0 {
+    margin-right: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
