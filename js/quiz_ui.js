@@ -4,17 +4,15 @@ var QuizUI = {
         if(quiz.hasEnded()) {
             this.displayScore();
         } else {
-
             this.displayQuestions();
             this.displayChoice();
             this.displayImage();
             this.displayProgress();
-
         }
     },
     //display questions
     displayQuestions: function() {
-        this.populateIdWithHTML("question", quiz.getCurrentQuestion().text);
+        this.populateIdWithHTML("questionObj", quiz.getCurrentQuestion().text);
     },
     // display image
     displayImage: function() {
@@ -42,15 +40,13 @@ var QuizUI = {
     },
     // display img according to id
     imageWithHTML: function(id, img) {
-            var element = document.createElement("img");
-            element.src = 'img/' + img +'.jpg';
-            element.id = img;
-            document.getElementById(id).appendChild(element);
+        var element = document.createElement("img");
+        element.src = 'img/' + img +'.jpg';
+        element.id = img;
+        document.getElementById(id).appendChild(element);
 
-            var item = document.getElementById(img-1);
-            item.parentNode.removeChild(item);
-
-
+        var item = document.getElementById(img-1);
+        item.parentNode.removeChild(item);
     },
     // display progress
     displayProgress: function() {
@@ -60,10 +56,9 @@ var QuizUI = {
     // delete first image according to the first question
     removeImage: function(id) {
         var list = document.getElementById(id);
-                if(list.hasChildNodes()) {
-                    list.removeChild(list.childNodes[0]);
-                }
-
+        if (list.hasChildNodes()) {
+            list.removeChild(list.childNodes[0]);
+        }
     },
     // guess handler
     guessHandler: function(id, guess) {

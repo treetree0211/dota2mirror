@@ -1,7 +1,11 @@
 body {
     background: url('../img/background.jpg');
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    display: block;
+    font-family:"宋体",Arial, Helvetica, sans-serif;
 }
 
 h2, h4{
@@ -10,29 +14,56 @@ h2, h4{
  }
 
  p {
-    font-family:"宋体",Arial, Helvetica, sans-serif;
     color: white;
-    font-weight: normal;
-    text-shadow: 0 1px 1px rgba(0,0,0,.8);
  }
 
- h2, h4 {
+ h2, h3, h4 {
     color: white;
     text-shadow: 0 1px 1px rgba(0,0,0,.8);
 
  }
 
- a {
+ a, li {
     text-decoration:none;
+    color: white;
  }
 
 .main-header {
     font-size: 1.2rem;
-    background-color: #384047;
-    padding: 1px;
+    background-color: #993208;
+    padding: 20px;
+    position: fixed;
+}
 
-    padding-left: 30px;
+.main-logo a,
+.main-nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px 15px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
 
+.main-nav a::before {
+    font-family: 'icomoon';
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    left: -30%;
+    transition: .4s;
+}
+
+.main-nav a:hover::before {
+    left:10%;
+}
+
+#start {
+    margin-top: 10%;
+    color: white;
+    text-align: center;
 }
 
 #intro {
@@ -41,57 +72,157 @@ h2, h4{
     margin-bottom: 30px;
 }
 
-#start {
-    color: white;
-    line-height: 1;
-    margin-top: 20px;
-    margin-left: 40%;
-    margin-right: 50%;
-    background: url('../img/aegis.png');
-    display: block;
-    box-sizing: border-box;
-    width: 20%;
-    outline: none;
-    border-radius: 5px;
-    box-shadow: 0.5px 0.5px 3px 3px #fff;
-    border: none;
+#question-intro h1 {
+    color: black;
 }
 
-.main-footer {
-    text-align: center;
-    font-size: 1.2rem;
-    background-color: #384047;
-    margin-top: 10%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 30px;
+#question-intro p {
+    color: black;
+    font-weight: 0;
 }
 
-.choose {
+#question-intro {
+    width: 80%;
+    line-height: 1.5;
     text-align: center;
-    margin: 0;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: white;
+    margin-top:20%;
+    margin-right: 0;
+    padding-top: 20px;
     padding-bottom: 50px;
 }
 
-img {
-    border: 3px;
-    border-style: solid;
-    border-color: #007aff;
+#question-intro-text {
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
-#choose0 {
-    margin-right: 30px;
+#intro-p {
+    width: 35%;
+    float: left;
+    margin-left: 13%;
 }
 
+#intro-item {
+    width: 35%;
+    float: right;
+    margin-right: 13%;
+}
 
+#intro-img {
+    margin-top: 5%;
+}
 
+#cat-p {
+    float: left;
+    margin-left: 13%;
+}
 
+#question-category {
+    text-align: center;
+    background: url('../img/cat-b.jpg');
+    background-repeat: no-repeat;
+    margin: 0;
+    margin-top: 30%;
+    padding-bottom: 35%;
+}
 
+#question-category h1{
+    color: white;
+}
 
+#cat-item {
+    float: right;
+    margin-right: 13%;
+}
 
+#cat-p-img,
+#cat-item-img {
+    width: 70%;
+}
 
+#cat-title {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.main-footer {
+    width:100%;
+    font-size: 1.0rem;
+    padding-right: 0;
+    background-color: #993208;
+    margin-top: 0%;
+    margin-bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 35px;
+    padding-left: 0;
+    float: left;
+    line-height: 0.8rem;
+}
 
+#footer-content {
+    padding-left: 50px;
+}
 
+/* Media Queries */
 
+@media (min-width: 1px) and (max-width: 768px) {
+    .main-nav li {
+        margin-top: 15px;
+    }
+    .main-nav li:first-child {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 769px) {
+
+    body {
+        padding-top: 120px;
+    }
+
+    .main-header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 30px;
+    }
+
+    .main-nav {
+        display: -webkit-flex;
+        display: flex;
+        height: 100%;
+        padding-bottom: 50px;
+        padding-top: 0;
+        margin-top: 0;
+        padding-right: 20px;
+    }
+
+    .main-nav li {
+        margin-left: 10px;
+        margin-right: 10px;
+        -webkit-align-self: center;
+        align-self: center;
+        -webkit-flex-grow: 1;
+        flex-grow: 1;
+        transition: .5s;
+    }
+
+    .main-nav li {
+        display: inline-block;
+        margin-top: 12px;
+        width: 150px;
+    }
+
+    .main-nav li:hover:not(.main-logo) {
+        flex-grow: 2;
+    }
+
+    .main-logo:first-child {
+        margin-right: 60%;
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+}
